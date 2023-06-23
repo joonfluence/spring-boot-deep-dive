@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Gradle Test Executor 8" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-06-21T06:20:32" hostname="ijunhoui-MacBookAir.local" time="0.048">
+<testsuite name="Gradle Test Executor 4" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-06-23T12:44:51" hostname="ijunhoui-MacBookAir.local" time="0.103">
   <properties/>
-  <testcase name="failed to execute tests" classname="Gradle Test Executor 8" time="0.048">
-    <failure message="org.gradle.api.internal.tasks.testing.TestSuiteExecutionException: Could not complete execution for Gradle Test Executor 8." type="org.gradle.api.internal.tasks.testing.TestSuiteExecutionException">org.gradle.api.internal.tasks.testing.TestSuiteExecutionException: Could not complete execution for Gradle Test Executor 8.
+  <testcase name="failed to execute tests" classname="Gradle Test Executor 4" time="0.103">
+    <failure message="org.gradle.api.internal.tasks.testing.TestSuiteExecutionException: Could not complete execution for Gradle Test Executor 4." type="org.gradle.api.internal.tasks.testing.TestSuiteExecutionException">org.gradle.api.internal.tasks.testing.TestSuiteExecutionException: Could not complete execution for Gradle Test Executor 4.
 	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
 	at java.base@11.0.12/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@11.0.12/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
