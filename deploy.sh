@@ -41,4 +41,4 @@ JAR_NAME=$(ls -tr $REPOSITORY/ | grep jar | tail -n 1)
 
 echo "> JAR Name: $JAR_NAME"
 
-nohup java -jar freelec-springboot2-webservice-1.0-SNAPSHOT.jar --spring.config.location=classpath:/application.properties,/home/ec2-user/app/application-oauth.yaml,/home/ec2-user/app/application-real-db.yaml,classpath:/application-real.properties --spring.profiles.active=real 2>&1 &
+nohup java -jar $REPOSITORY/$JAR_NAME --spring.config.location=classpath:/application.properties,/home/ec2-user/app/application-oauth.yaml,/home/ec2-user/app/application-real-db.yaml,classpath:/application-real.properties --spring.profiles.active=real 2>&1 &

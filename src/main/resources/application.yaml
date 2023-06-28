@@ -10,4 +10,4 @@ spring:
   profiles:
     include: oauth
   session:
-    storeType: jdbc
+    storeType: jdbc4
