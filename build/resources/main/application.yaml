@@ -9,5 +9,6 @@ spring:
       enabled: true
   profiles:
     include: oauth
+    active: real
   session:
     storeType: jdbc
