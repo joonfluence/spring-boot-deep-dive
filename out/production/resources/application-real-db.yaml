@@ -1,0 +1,10 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        ddlAuto: none
+    datasource:
+      url: jdbc:mariadb//freelec-springboot2-webservice.c9ifuqosstbf.ap-northeast-2.rds.amazonaws.com:3306/freelect-springboot2-webservice
+      username: joonfluence
+      password: gmlfkr7236
+      driverClassName: org.mariadb.jdbc.Driver
