@@ -8,6 +8,7 @@ spring:
     console:
       enabled: true
   profiles:
-    include: oauth
+    include: real
+    active: real
   session:
     storeType: jdbc
