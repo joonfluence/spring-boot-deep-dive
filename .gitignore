@@ -1,4 +1,6 @@
 .idea
 .gradle
+/build
+/out
 /src/main/resources/application-oauth.yaml
 /src/main/resources/application-real*.yaml
