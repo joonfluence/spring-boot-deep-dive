@@ -1,14 +1,17 @@
 package com.joonfluence.service.posts;
 
+import com.joonfluence.domain.posts.Posts;
 import com.joonfluence.web.dto.posts.PostsCreateRequestDto;
-import com.joonfluence.web.dto.posts.PostsDeleteRequestDto;
 import com.joonfluence.web.dto.posts.PostsFindRequestDto;
 import com.joonfluence.web.dto.posts.PostsUpdateRequestDto;
+import org.springframework.data.domain.Page;
 
 public interface PostsService {
-    void create(PostsCreateRequestDto dto) throws IllegalAccessException, Exception;
-    void update(PostsUpdateRequestDto dto) throws Exception;
-    void find(PostsFindRequestDto dto) throws Exception;
-    void findById(String id) throws Exception;
-    void delete(String id) throws Exception;
+    Posts create(PostsCreateRequestDto dto) throws IllegalAccessException, Exception;
+    Posts update(Long id, PostsUpdateRequestDto dto) throws Exception;
+    Page<Posts> find(PostsFindRequestDto dto) throws Exception;
+
+    Posts findById(Long id) throws Exception;
+
+    void delete(Long id) throws Exception;
 }

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="hello.core.AllBeanTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-07-19T04:08:19" hostname="ijunhoui-MacBookAir.local" time="1.113">
+  <properties/>
+  <testcase name="findAllBean()" classname="hello.core.AllBeanTest" time="1.113"/>
+  <system-out><![CDATA[13:08:20.095 [Test worker] DEBUG org.springframework.context.annotation.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@205d38da
+13:08:20.135 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+13:08:20.365 [Test worker] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/joonholee/devRepo/service/spring-boot-practice/spring-lecture-1/build/classes/java/main/hello/core/discount/FixDiscountPolicy.class]
+13:08:20.370 [Test worker] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/joonholee/devRepo/service/spring-boot-practice/spring-lecture-1/build/classes/java/main/hello/core/discount/RateDiscountPolicy.class]
+13:08:20.373 [Test worker] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/joonholee/devRepo/service/spring-boot-practice/spring-lecture-1/build/classes/java/main/hello/core/member/MemberServiceImpl.class]
+13:08:20.373 [Test worker] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/joonholee/devRepo/service/spring-boot-practice/spring-lecture-1/build/classes/java/main/hello/core/member/MemoryMemberRepository.class]
+13:08:20.374 [Test worker] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/joonholee/devRepo/service/spring-boot-practice/spring-lecture-1/build/classes/java/main/hello/core/order/OrderServiceImpl.class]
+13:08:20.550 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+13:08:20.555 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+13:08:20.562 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+13:08:20.565 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+13:08:20.581 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'autoAppConfig'
+13:08:20.587 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'allBeanTest.DiscountService'
+13:08:20.633 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'fixDiscountPolicy'
+13:08:20.637 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'rateDiscountPolicy'
+13:08:20.693 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'allBeanTest.DiscountService' via constructor to bean named 'fixDiscountPolicy'
+13:08:20.694 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'allBeanTest.DiscountService' via constructor to bean named 'rateDiscountPolicy'
+policyMap = {fixDiscountPolicy=hello.core.discount.FixDiscountPolicy@ab7a938, rateDiscountPolicy=hello.core.discount.RateDiscountPolicy@3faf2e7d}
+policies = [hello.core.discount.FixDiscountPolicy@ab7a938, hello.core.discount.RateDiscountPolicy@3faf2e7d]
+13:08:20.699 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'memberServiceImpl'
+13:08:20.702 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'memoryMemberRepository'
+13:08:20.703 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'memberServiceImpl' via constructor to bean named 'memoryMemberRepository'
+13:08:20.705 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'orderServiceImpl'
+13:08:20.711 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'orderServiceImpl' via constructor to bean named 'memoryMemberRepository'
+13:08:20.711 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'orderServiceImpl' via constructor to bean named 'rateDiscountPolicy'
+discountCode = fixDiscountPolicy
+discountPolicy = hello.core.discount.FixDiscountPolicy@ab7a938
+discountCode = rateDiscountPolicy
+discountPolicy = hello.core.discount.RateDiscountPolicy@3faf2e7d
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

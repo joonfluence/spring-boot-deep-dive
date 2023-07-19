@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="hello.core.beanfind.ApplicationContextInfoTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-07-19T04:08:26" hostname="ijunhoui-MacBookAir.local" time="0.036">
+  <properties/>
+  <testcase name="애플리케이션 빈 출력하기" classname="hello.core.beanfind.ApplicationContextInfoTest" time="0.004"/>
+  <testcase name="모든 빈 출력하기" classname="hello.core.beanfind.ApplicationContextInfoTest" time="0.004"/>
+  <system-out><![CDATA[name = appConfig object = Generic bean: class [hello.core.AppConfig$$EnhancerBySpringCGLIB$$b2d38a82]; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null
+name = memberService object = Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=appConfig; factoryMethodName=memberService; initMethodName=null; destroyMethodName=(inferred); defined in hello.core.AppConfig
+name = memberRepository object = Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=appConfig; factoryMethodName=memberRepository; initMethodName=null; destroyMethodName=(inferred); defined in hello.core.AppConfig
+name = discountPolicy object = Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=appConfig; factoryMethodName=discountPolicy; initMethodName=null; destroyMethodName=(inferred); defined in hello.core.AppConfig
+name = orderService object = Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=appConfig; factoryMethodName=orderService; initMethodName=null; destroyMethodName=(inferred); defined in hello.core.AppConfig
+name= org.springframework.context.annotation.internalConfigurationAnnotationProcessor object= org.springframework.context.annotation.ConfigurationClassPostProcessor@5b000fe6
+name= org.springframework.context.annotation.internalAutowiredAnnotationProcessor object= org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor@4751e8b9
+name= org.springframework.context.annotation.internalCommonAnnotationProcessor object= org.springframework.context.annotation.CommonAnnotationBeanPostProcessor@7af443a3
+name= org.springframework.context.event.internalEventListenerProcessor object= org.springframework.context.event.EventListenerMethodProcessor@7b25ab31
+name= org.springframework.context.event.internalEventListenerFactory object= org.springframework.context.event.DefaultEventListenerFactory@2001e48c
+name= appConfig object= hello.core.AppConfig$$EnhancerBySpringCGLIB$$b2d38a82@68ddd415
+name= memberService object= hello.core.member.MemberServiceImpl@306c7bf6
+name= memberRepository object= hello.core.member.MemoryMemberRepository@664632e9
+name= discountPolicy object= hello.core.discount.RateDiscountPolicy@494c8f29
+name= orderService object= hello.core.order.OrderServiceImpl@4f379769
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

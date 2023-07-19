@@ -1,4 +1,8 @@
 package com.joonfluence.web.dto.posts;
 
-public class PostsFindRequestDto {
-}
+import com.joonfluence.web.dto.PaginationQueryDto;
+import lombok.NoArgsConstructor;
+
+
+@NoArgsConstructor
+public class PostsFindRequestDto extends PaginationQueryDto {}

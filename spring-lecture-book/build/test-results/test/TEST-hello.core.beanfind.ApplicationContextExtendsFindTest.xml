@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="hello.core.beanfind.ApplicationContextExtendsFindTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-07-19T04:08:26" hostname="ijunhoui-MacBookAir.local" time="0.091">
+  <properties/>
+  <testcase name="부모 타입으로 조회시, 자식이 둘 이상 있으면, 중복 오류가 발생한다" classname="hello.core.beanfind.ApplicationContextExtendsFindTest" time="0.007"/>
+  <testcase name="특정 하위 타입으로 조회" classname="hello.core.beanfind.ApplicationContextExtendsFindTest" time="0.003"/>
+  <testcase name="부모 타입으로 조회시, 자식이 둘 이상이면, 빈 이름을 지정하면 된다" classname="hello.core.beanfind.ApplicationContextExtendsFindTest" time="0.002"/>
+  <testcase name="부모 타입으로 모두 조회하기" classname="hello.core.beanfind.ApplicationContextExtendsFindTest" time="0.008"/>
+  <system-out><![CDATA[key = rateDiscountPolicy value = hello.core.discount.RateDiscountPolicy@746c411c
+key = fixDiscountPolicy value = hello.core.discount.FixDiscountPolicy@43ecfeb5
+beansOfType = {rateDiscountPolicy=hello.core.discount.RateDiscountPolicy@746c411c, fixDiscountPolicy=hello.core.discount.FixDiscountPolicy@43ecfeb5}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
