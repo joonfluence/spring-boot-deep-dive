@@ -5,24 +5,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bb50976-e636-4b5e-828d-c5da66e8b6a9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/spring-boot-practice.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-blog/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-blog/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-blog/src/main/java/com/joonfluence/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-blog/src/main/java/com/joonfluence/controller/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-blog/src/main/java/com/joonfluence/domain/posts/Posts.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-blog/src/main/java/com/joonfluence/domain/posts/Posts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-blog/src/main/java/com/joonfluence/service/posts/PostsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-blog/src/main/java/com/joonfluence/service/posts/PostsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-blog/src/main/java/com/joonfluence/service/posts/PostsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-blog/src/main/java/com/joonfluence/service/posts/PostsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-blog/src/main/java/com/joonfluence/web/dto/PaginationQueryDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-blog/src/main/java/com/joonfluence/web/dto/PaginationQueryDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-blog/src/main/java/com/joonfluence/web/dto/ResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-blog/src/main/java/com/joonfluence/web/dto/ResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-blog/src/main/java/com/joonfluence/web/dto/ResponseMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-blog/src/main/java/com/joonfluence/web/dto/ResponseMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-blog/src/main/java/com/joonfluence/web/dto/posts/PostsCreateRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-blog/src/main/java/com/joonfluence/web/dto/posts/PostsCreateRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-blog/src/main/java/com/joonfluence/web/dto/posts/PostsFindRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-blog/src/main/java/com/joonfluence/web/dto/posts/PostsFindRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-blog/src/main/java/com/joonfluence/web/dto/posts/PostsUpdateRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-blog/src/main/java/com/joonfluence/web/dto/posts/PostsUpdateRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-blog/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-blog/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-blog/src/test/java/com/joonfluence/ApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-blog/src/test/java/com/joonfluence/ApplicationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-blog/src/test/java/com/joonfluence/controller/PostsControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-blog/src/test/java/com/joonfluence/controller/PostsControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-blog/src/test/java/com/joonfluence/domain/posts/PostRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-blog/src/test/java/com/joonfluence/domain/posts/PostRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-blog/src/test/java/com/joonfluence/service/posts/PostsServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-blog/src/test/java/com/joonfluence/service/posts/PostsServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/inflearn/core/common/MyLogger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/inflearn/core/common/MyLoggerProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/inflearn/core/web/LogDemoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/inflearn/core/web/LogDemoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/inflearn/core/lifecycle/BeanLifeCycleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/inflearn/core/lifecycle/NetworkClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/inflearn/core/scope/PrototypeProviderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/inflearn/core/scope/PrototypeProviderTest2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/inflearn/core/scope/PrototypeProviderTest3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/inflearn/core/scope/PrototypeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/inflearn/core/scope/SingletonTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/inflearn/core/scope/SingletonWithPrototypeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/inflearn/core/AppConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/inflearn/core/AutoAppConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/inflearn/core/MemberApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/inflearn/core/OrderApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/inflearn/core/discount/DiscountPolicy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/inflearn/core/discount/FixDiscountPolicy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/inflearn/core/discount/RateDiscountPolicy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/inflearn/core/member/Grade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/inflearn/core/member/Member.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/inflearn/core/member/MemberRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/inflearn/core/member/MemberService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/inflearn/core/member/MemberServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/inflearn/core/member/MemoryMemberRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/inflearn/core/order/Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/inflearn/core/order/OrderService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/inflearn/core/order/OrderServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/appConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/appConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/inflearn/core/MemberServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/inflearn/core/allBean/AllBeanTest$DiscountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/inflearn/core/allBean/AllBeanTest$DiscountService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/inflearn/core/allBean/AllBeanTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/inflearn/core/allBean/AllBeanTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/inflearn/core/autoConfig/AutoAppConfigTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/inflearn/core/autoConfig/AutoAppConfigTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/inflearn/core/beanfind/ApplicationContextBasicFindTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/inflearn/core/beanfind/ApplicationContextBasicFindTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/inflearn/core/beanfind/ApplicationContextExtendsFindTest$TestConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/inflearn/core/beanfind/ApplicationContextExtendsFindTest$TestConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/inflearn/core/beanfind/ApplicationContextExtendsFindTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/inflearn/core/beanfind/ApplicationContextExtendsFindTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/inflearn/core/beanfind/ApplicationContextInfoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/inflearn/core/beanfind/ApplicationContextInfoTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/inflearn/core/discount/RateDiscountPolicyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/inflearn/core/discount/RateDiscountPolicyTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/inflearn/core/manualConfig/OrderAppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/inflearn/core/manualConfig/OrderAppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/inflearn/core/singleton/ConfigurationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/inflearn/core/singleton/ConfigurationTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/inflearn/core/singleton/SingletonTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/inflearn/core/singleton/SingletonTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/inflearn/core/xml/XmlAppContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/inflearn/core/xml/XmlAppContext.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring-multi-module" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-multi-module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../toby-spring3-1" beforeDir="false" afterPath="$PROJECT_DIR$/../toby-spring3-1" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,22 +105,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "/Users/joonholee/devRepo/service/spring-boot-practice/spring-lecture-book",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/joonholee/devRepo/service/spring-boot-practice/spring-lecture-book&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="inflearn.core.web" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$" />
@@ -102,17 +136,19 @@
       <recent name="hello.core" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="inflearn.core.common" />
+      <recent name="inflearn.core.scope" />
       <recent name="hello.core.scan.filter" />
       <recent name="hello.core" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.XmlAppContext">
-    <configuration name="toby.ioc.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="toby.ioc.Main" />
+  <component name="RunManager" selected="Application.CoreApplication">
+    <configuration name="CoreApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="inflearn.core.CoreApplication" />
       <module name="core.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="toby.ioc.*" />
+          <option name="PATTERN" value="inflearn.core.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -120,57 +156,64 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in core.test (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="core.test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AllBeanTest.findAllBean" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PrototypeProviderTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="core.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="inflearn.core.allBean.*" />
+          <option name="PATTERN" value="inflearn.core.scope.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="inflearn.core.allBean" />
-      <option name="MAIN_CLASS_NAME" value="inflearn.core.allBean.AllBeanTest" />
-      <option name="METHOD_NAME" value="findAllBean" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AutoAppConfigTest.basicScan" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="core.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="inflearn.core.allBean.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="inflearn.core.autoConfig" />
-      <option name="MAIN_CLASS_NAME" value="inflearn.core.autoConfig.AutoAppConfigTest" />
-      <option name="METHOD_NAME" value="basicScan" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="XmlAppContext" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="core.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="inflearn.core.xml.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="inflearn.core.xml" />
-      <option name="MAIN_CLASS_NAME" value="inflearn.core.xml.XmlAppContext" />
+      <option name="PACKAGE_NAME" value="inflearn.core.scope" />
+      <option name="MAIN_CLASS_NAME" value="inflearn.core.scope.PrototypeProviderTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrototypeProviderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="core.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="inflearn.core.scope.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="inflearn.core.scope" />
+      <option name="MAIN_CLASS_NAME" value="inflearn.core.scope.PrototypeProviderTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrototypeProviderTest2.providerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="core.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="inflearn.core.scope.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="inflearn.core.scope" />
+      <option name="MAIN_CLASS_NAME" value="inflearn.core.scope.PrototypeProviderTest2" />
+      <option name="METHOD_NAME" value="providerTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrototypeProviderTest3.providerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="core.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="inflearn.core.scope.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="inflearn.core.scope" />
+      <option name="MAIN_CLASS_NAME" value="inflearn.core.scope.PrototypeProviderTest3" />
+      <option name="METHOD_NAME" value="providerTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -189,19 +232,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.toby.ioc.Main" />
-      <item itemvalue="JUnit.XmlAppContext" />
-      <item itemvalue="JUnit.All in core.test (2)" />
-      <item itemvalue="JUnit.AllBeanTest.findAllBean" />
-      <item itemvalue="JUnit.AutoAppConfigTest.basicScan" />
+      <item itemvalue="Application.CoreApplication" />
+      <item itemvalue="JUnit.PrototypeProviderTest" />
+      <item itemvalue="JUnit.PrototypeProviderTest (1)" />
+      <item itemvalue="JUnit.PrototypeProviderTest2.providerTest" />
+      <item itemvalue="JUnit.PrototypeProviderTest3.providerTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.XmlAppContext" />
-        <item itemvalue="Application.toby.ioc.Main" />
-        <item itemvalue="JUnit.AutoAppConfigTest.basicScan" />
-        <item itemvalue="JUnit.AllBeanTest.findAllBean" />
-        <item itemvalue="JUnit.All in core.test (2)" />
+        <item itemvalue="Application.CoreApplication" />
+        <item itemvalue="JUnit.PrototypeProviderTest3.providerTest" />
+        <item itemvalue="JUnit.PrototypeProviderTest2.providerTest" />
+        <item itemvalue="JUnit.PrototypeProviderTest (1)" />
+        <item itemvalue="JUnit.PrototypeProviderTest" />
       </list>
     </recent_temporary>
   </component>
