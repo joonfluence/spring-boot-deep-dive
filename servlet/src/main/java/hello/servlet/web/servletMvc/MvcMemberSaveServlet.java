@@ -1,26 +1,28 @@
-package hello.servlet.web.frontcontroller.v1.controller;
+package hello.servlet.web.servletMvc;
 
 import hello.servlet.domain.member.Member;
 import hello.servlet.domain.member.MemberRepository;
-import hello.servlet.web.frontcontroller.v1.ControllerV1;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-public class MemberSaveControllerV1 implements ControllerV1 {
+@WebServlet(name = "mvcMemberSaveServlet", urlPatterns = "/servlet-mvc/members/save")
+public class MvcMemberSaveServlet extends HttpServlet {
 
     private MemberRepository memberRepository = MemberRepository.getInstance();
 
     @Override
-    public void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         int age = Integer.parseInt(request.getParameter("age"));
         Member member = new Member(username, age);
-        memberRepository.save(member);
-        request.setAttribute("member", member);
+        Member savedMember = memberRepository.save(member);
+        request.setAttribute("member", savedMember);
 
         String viewPath = "/WEB-INF/views/save-result.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);

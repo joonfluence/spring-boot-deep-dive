@@ -1,6 +1,6 @@
-package hello.servlet.web.frontcontroller.v2;
+package hello.servlet.web.frontController.v2;
 
-import hello.servlet.web.frontcontroller.MyView;
+import hello.servlet.web.frontController.MyView;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
