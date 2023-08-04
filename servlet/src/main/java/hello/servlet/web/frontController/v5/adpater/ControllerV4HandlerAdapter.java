@@ -2,6 +2,7 @@ package hello.servlet.web.frontController.v5.adpater;
 
 import hello.servlet.web.frontController.MyModelView;
 import hello.servlet.web.frontController.v3.ControllerV3;
+import hello.servlet.web.frontController.v4.ControllerV4;
 import hello.servlet.web.frontController.v5.MyHandlerAdapter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -11,19 +12,24 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ControllerV3HandlerAdapter implements MyHandlerAdapter {
+public class ControllerV4HandlerAdapter implements MyHandlerAdapter {
     @Override
     public boolean suppports(Object handler) {
-        return (handler instanceof ControllerV3);
+        // MemberFormServletV4
+        return (handler instanceof ControllerV4);
     }
 
     @Override
     public MyModelView handle(HttpServletRequest request, HttpServletResponse response, Object handler) throws ServletException, IOException {
-        ControllerV3 controller = (ControllerV3) handler;
+        ControllerV4 controller = (ControllerV4) handler;
 
         Map<String, String> paramMap = createParamMap(request);
-        MyModelView modelView = controller.process(paramMap);
+        HashMap<String, Object> model = new HashMap<>();
+        //
+        String viewName = controller.process(paramMap, model);
 
+        MyModelView modelView = new MyModelView(viewName);
+        modelView.setModel(model);
         return modelView;
     }
 
