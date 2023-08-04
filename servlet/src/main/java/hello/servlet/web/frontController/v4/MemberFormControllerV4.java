@@ -1,53 +1,13 @@
 package hello.servlet.web.frontController.v4;
 
-import hello.servlet.web.frontController.MyView;
-import hello.servlet.web.frontController.v4.controller.MemberFormServletV4;
-import hello.servlet.web.frontController.v4.controller.MemberListServletV4;
-import hello.servlet.web.frontController.v4.controller.MemberSaveServletV4;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
 
-@WebServlet(name = "frontControllerServletV4", urlPatterns = "/front-controller/v4/*")
-public class MemberFormControllerV4 extends HttpServlet {
-
-    Map<String, ControllerV4> controllerMap = new HashMap<>();
-
-    public MemberFormControllerV4() {
-        this.controllerMap.put("/front-controller/v4/members/new-form", new MemberFormServletV4());
-        this.controllerMap.put("/front-controller/v4/members/save", new MemberSaveServletV4());
-        this.controllerMap.put("/front-controller/v4/members", new MemberListServletV4());
-    }
-
+public class MemberFormControllerV4 implements ControllerV4 {
     @Override
-    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String requestURI = request.getRequestURI();
-        ControllerV4 controllerV4 = controllerMap.get(requestURI);
-        if (controllerV4 == null) {
-            response.setStatus(HttpServletResponse.SC_NOT_FOUND);
-            return;
-        }
-
-        Map<String, String> paramMap = createParamMap(request);
-        Map<String, Object> model = new HashMap<>();
-        String viewPath = controllerV4.process(paramMap, model);
-        MyView view = viewResolver(viewPath);
-        view.render(model, request, response);
-    }
-
-    private Map<String, String> createParamMap(HttpServletRequest request) {
-        Map<String, String> paramMap = new HashMap<>();
-        request.getParameterNames().asIterator().forEachRemaining(paramName -> paramMap.put(paramName, request.getParameter(paramName)));
-        return paramMap;
-    }
-
-    private MyView viewResolver(String viewPath) {
-        return new MyView("/WEB-INF/views/" + viewPath + ".jsp");
+    public String process(Map<String, String> paramMap, Map<String, Object> model) throws ServletException, IOException {
+        return "new-form";
     }
 }
