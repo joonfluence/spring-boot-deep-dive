@@ -1,4 +1,4 @@
-package spring.jpa.domain;
+package spring.jpa.domain.product;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -6,17 +6,17 @@ import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class MemberRepository {
+public class ProductRepository {
     @PersistenceContext
     EntityManager entityManager;
 
     @Transactional
-    public Long save(Member member) {
-        entityManager.persist(member);
-        return member.getId();
+    public Long save(Product product){
+        entityManager.persist(product);
+        return product.getId();
     }
 
-    public Member find(Long id) {
-        return entityManager.find(Member.class, id);
+    public Product findById(Long id){
+        return entityManager.find(Product.class, id);
     }
 }
