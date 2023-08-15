@@ -24,6 +24,6 @@ public class Delivery extends BaseTimeEntity {
     @Enumerated(EnumType.STRING)
     private DeliveryStatus deliveryStatus;
 
-    @OneToOne(mappedBy = "delivery", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "delivery", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Order order;
 }
