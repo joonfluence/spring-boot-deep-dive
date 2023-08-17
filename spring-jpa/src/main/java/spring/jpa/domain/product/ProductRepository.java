@@ -12,22 +12,22 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ProductRepository {
 
-    private final EntityManager entityManager;
+    private final EntityManager em;
 
     @Transactional
     public void save(Product product){
         if(product.getId() == null) {
-            entityManager.persist(product);
+            em.persist(product);
         } else {
-            entityManager.merge(product);
+            em.merge(product);
         }
     }
 
     public Product findById(Long id){
-        return entityManager.find(Product.class, id);
+        return em.find(Product.class, id);
     }
 
     public List<Product> findAll(){
-        return entityManager.createQuery("select p from Product p", Product.class).getResultList();
+        return em.createQuery("select p from Product p", Product.class).getResultList();
     }
 }

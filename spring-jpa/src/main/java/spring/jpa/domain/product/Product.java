@@ -16,6 +16,7 @@ import java.util.List;
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(name = "dtype")
 @Builder
+@Setter
 @Entity
 public class Product extends BaseTimeEntity {
     @Id

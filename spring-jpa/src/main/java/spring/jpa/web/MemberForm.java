@@ -1,4 +1,4 @@
-package spring.jpa.domain.member;
+package spring.jpa.web;
 
 import jakarta.validation.constraints.NotEmpty;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package spring.jpa.web;
+package spring.jpa.web.controller;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import spring.jpa.domain.address.Address;
 import spring.jpa.domain.member.Member;
-import spring.jpa.domain.member.MemberForm;
 import spring.jpa.service.MemberService;
+import spring.jpa.web.MemberForm;
 
 import java.util.List;
 

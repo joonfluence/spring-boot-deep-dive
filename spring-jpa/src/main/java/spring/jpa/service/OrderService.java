@@ -13,6 +13,8 @@ import spring.jpa.domain.orderItem.OrderItem;
 import spring.jpa.domain.product.Product;
 import spring.jpa.domain.product.ProductRepository;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class OrderService {
@@ -60,7 +62,7 @@ public class OrderService {
     /**
      * 주문 취소
      */
-    //    public List<Order> findOrders(OrderSearch orderSearch){
-    //        return orderRepository.findAll(orderSearch);
-    //    }
+    public List<Order> findOrders(OrderSearch orderSearch){
+        return orderRepository.findAllByString(orderSearch);
+    }
 }
