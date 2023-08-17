@@ -15,8 +15,9 @@ import java.util.stream.Stream;
 
 @Getter
 @AllArgsConstructor
-@NoArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Builder
+@Table(name = "orders")
 @Entity
 public class Order extends BaseTimeEntity {
     @Id
@@ -34,7 +35,7 @@ public class Order extends BaseTimeEntity {
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "delivery_id")
     private Delivery delivery;
 
@@ -44,7 +45,7 @@ public class Order extends BaseTimeEntity {
     }
 
     public void addOrderItem(OrderItem orderItem){
-        orderItems.add(orderItem);
+        // orderItems.add(orderItem);
         orderItem.setOrder(this);
     }
 
@@ -55,7 +56,7 @@ public class Order extends BaseTimeEntity {
 
     //==생성 메서드==//
     public static Order createOrder(Member member, Delivery delivery, OrderItem... orderItems){
-        Order order = Order.builder().member(member).delivery(delivery).status(OrderStatus.ORDER).build();
+        Order order = Order.builder().member(member).delivery(delivery).status(OrderStatus.ORDER).orderItems(List.of(orderItems)).build();
         Arrays.stream(orderItems).forEach(order::addOrderItem);
         return order;
     }

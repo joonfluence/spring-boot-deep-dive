@@ -7,7 +7,7 @@ import spring.jpa.domain.product.Product;
 
 @Getter
 @AllArgsConstructor
-@NoArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Builder
 @Setter
 @Entity
