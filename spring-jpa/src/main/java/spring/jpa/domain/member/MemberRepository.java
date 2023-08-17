@@ -3,14 +3,16 @@ package spring.jpa.domain.member;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
+@RequiredArgsConstructor
 public class MemberRepository {
-    @PersistenceContext
-    EntityManager entityManager;
+
+    private final EntityManager entityManager;
 
     @Transactional
     public Long save(Member member) {
