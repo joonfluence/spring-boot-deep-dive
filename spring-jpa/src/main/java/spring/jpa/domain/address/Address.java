@@ -16,5 +16,5 @@ public class Address {
     private String address1;
     private String address2;
     @Column(columnDefinition = "integer default 0")
-    private Integer zipCode;
+    private String zipCode;
 }

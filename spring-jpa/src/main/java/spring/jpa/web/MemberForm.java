@@ -10,5 +10,5 @@ public class MemberForm {
     private String name;
     private String address1;
     private String address2;
-    private Integer zipCode;
+    private String zipCode;
 }

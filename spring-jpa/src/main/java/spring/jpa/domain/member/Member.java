@@ -1,11 +1,8 @@
 package spring.jpa.domain.member;
 
 import jakarta.persistence.*;
-import lombok.Getter;
+import lombok.*;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
 import spring.jpa.domain.BaseTimeEntity;
 import spring.jpa.domain.address.Address;
 import spring.jpa.domain.order.Order;
@@ -19,6 +16,7 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@Setter
 @Getter
 public class Member extends BaseTimeEntity {
     @Id
