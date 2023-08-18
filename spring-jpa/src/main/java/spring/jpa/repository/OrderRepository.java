@@ -1,4 +1,4 @@
-package spring.jpa.domain.order;
+package spring.jpa.repository;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
@@ -7,6 +7,7 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.StringUtils;
+import spring.jpa.domain.order.Order;
 import spring.jpa.service.OrderSearch;
 
 import java.util.ArrayList;
@@ -20,16 +21,20 @@ public class OrderRepository {
     private final EntityManager em;
 
     @Transactional
-    public Long save(Order order){
+    public Long save(spring.jpa.domain.order.Order order){
         em.persist(order);
         return order.getId();
     }
 
-    public Order findById(Long id){
-        return em.find(Order.class, id);
+    public spring.jpa.domain.order.Order findById(Long id){
+        return em.find(spring.jpa.domain.order.Order.class, id);
     }
 
-    public List<Order> findAllByString(OrderSearch orderSearch){
+    public List<spring.jpa.domain.order.Order> findAll() {
+        return em.createQuery("select o from Order o", spring.jpa.domain.order.Order.class).getResultList();
+    }
+
+    public List<spring.jpa.domain.order.Order> findAllByString(OrderSearch orderSearch){
         //language=JPAQL
         String jpql = "select o From Order o join o.member m";
         boolean isFirstCondition = true;
@@ -56,7 +61,7 @@ public class OrderRepository {
             jpql += " m.name like :name";
         }
 
-        TypedQuery<Order> query = em.createQuery(jpql, Order.class) .setMaxResults(1000); //최대 1000건
+        TypedQuery<spring.jpa.domain.order.Order> query = em.createQuery(jpql, spring.jpa.domain.order.Order.class) .setMaxResults(1000); //최대 1000건
         if (orderSearch.getOrderStatus() != null) {
             query = query.setParameter("status", orderSearch.getOrderStatus());
         }
@@ -69,10 +74,10 @@ public class OrderRepository {
     /**
      * JPA Criteria
      */
-    public List<Order> findAllByCriteria(OrderSearch orderSearch){
+    public List<spring.jpa.domain.order.Order> findAllByCriteria(OrderSearch orderSearch){
         CriteriaBuilder cb = em.getCriteriaBuilder();
-        CriteriaQuery<Order> cq = cb.createQuery(Order.class);
-        Root<Order> o = cq.from(Order.class);
+        CriteriaQuery<spring.jpa.domain.order.Order> cq = cb.createQuery(spring.jpa.domain.order.Order.class);
+        Root<spring.jpa.domain.order.Order> o = cq.from(spring.jpa.domain.order.Order.class);
         Join<Object, Object> m = o.join("member", JoinType.INNER);
         List<Predicate> criteria = new ArrayList<>();
 
@@ -89,7 +94,11 @@ public class OrderRepository {
         }
 
         cq.where(cb.and(criteria.toArray(new Predicate[criteria.size()])));
-        TypedQuery<Order> query = em.createQuery(cq).setMaxResults(1000); //최대 1000건
+        TypedQuery<spring.jpa.domain.order.Order> query = em.createQuery(cq).setMaxResults(1000); //최대 1000건
         return query.getResultList();
+    }
+
+    public List<spring.jpa.domain.order.Order> findAllWithMemberDelivery() {
+        return em.createQuery("select o from Order o" + " join fetch o.member m" + " join fetch o.delivery d", Order.class).getResultList();
     }
 }

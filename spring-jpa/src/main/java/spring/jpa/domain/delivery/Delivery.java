@@ -1,5 +1,6 @@
 package spring.jpa.domain.delivery;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import spring.jpa.domain.BaseTimeEntity;
@@ -24,6 +25,7 @@ public class Delivery extends BaseTimeEntity {
     @Enumerated(EnumType.STRING)
     private DeliveryStatus deliveryStatus;
 
+    @JsonIgnore
     @OneToOne(mappedBy = "delivery", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Order order;
 }

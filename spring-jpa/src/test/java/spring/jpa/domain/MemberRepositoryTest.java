@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import spring.jpa.domain.member.Member;
-import spring.jpa.domain.member.MemberRepository;
+import spring.jpa.repository.MemberRepository;
 
 import static org.junit.jupiter.api.Assertions.*;
 

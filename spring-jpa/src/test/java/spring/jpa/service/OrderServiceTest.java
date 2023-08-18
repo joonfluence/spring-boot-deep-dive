@@ -11,7 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import spring.jpa.domain.address.Address;
 import spring.jpa.domain.member.Member;
 import spring.jpa.domain.order.Order;
-import spring.jpa.domain.order.OrderRepository;
+import spring.jpa.repository.OrderRepository;
 import spring.jpa.domain.order.OrderStatus;
 import spring.jpa.domain.product.Book;
 import spring.jpa.domain.product.Product;

@@ -1,4 +1,4 @@
-package spring.jpa.domain.orderItem;
+package spring.jpa.repository;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;

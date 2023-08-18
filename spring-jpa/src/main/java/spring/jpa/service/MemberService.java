@@ -2,7 +2,7 @@ package spring.jpa.service;
 
 import jakarta.transaction.Transactional;
 import spring.jpa.domain.member.Member;
-import spring.jpa.domain.member.MemberRepository;
+import spring.jpa.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
