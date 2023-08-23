@@ -11,12 +11,12 @@ import spring.jpa.domain.orderItem.OrderItem;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Stream;
 
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Builder
+@Setter
 @Table(name = "orders")
 @Entity
 public class Order extends BaseTimeEntity {
@@ -45,7 +45,7 @@ public class Order extends BaseTimeEntity {
     }
 
     public void addOrderItem(OrderItem orderItem){
-        // orderItems.add(orderItem);
+        orderItems.add(orderItem);
         orderItem.setOrder(this);
     }
 
@@ -56,8 +56,13 @@ public class Order extends BaseTimeEntity {
 
     //==생성 메서드==//
     public static Order createOrder(Member member, Delivery delivery, OrderItem... orderItems){
-        Order order = Order.builder().member(member).delivery(delivery).status(OrderStatus.ORDER).orderItems(List.of(orderItems)).build();
-        Arrays.stream(orderItems).forEach(order::addOrderItem);
+        Order order = new Order();
+        order.setMember(member);
+        order.setDelivery(delivery);
+        for (OrderItem orderItem : orderItems) {
+            order.addOrderItem(orderItem);
+        }
+        order.setStatus(OrderStatus.ORDER);
         return order;
     }
 
