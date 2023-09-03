@@ -1,9 +1,12 @@
-package com.example.demo.repository;
+package com.example.demo.repository.v0;
 
 import com.example.demo.domain.Member;
 import com.example.demo.exception.NoMemberException;
+import com.example.demo.repository.MemberQueries;
+import com.example.demo.repository.MemberRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,14 +15,14 @@ import java.sql.SQLException;
 
 @Slf4j
 @Repository
-public class MemberRepositoryV0 extends ParentMemberRepository implements MemberRepository {
-    private Connection connection = null;
-    private PreparedStatement preparedStatement = null;
-    private ResultSet resultSet = null;
+public class MemberRepositoryV0 extends ParentMemberRepositoryV0 implements MemberRepository {
 
     @Override
+    @Transactional
     public Member save(Member member) throws SQLException {
         String insertQuery = MemberQueries.CreateMember;
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
 
         try {
             connection = getConnection();
@@ -39,6 +42,9 @@ public class MemberRepositoryV0 extends ParentMemberRepository implements Member
     @Override
     public Member findById(String memberId) throws SQLException {
         String selectQuery = MemberQueries.FindMemberById;
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
 
         try {
             connection = getConnection();
@@ -62,9 +68,14 @@ public class MemberRepositoryV0 extends ParentMemberRepository implements Member
     }
 
     @Override
+    @Transactional
     public void updateById(int money, String memberId) throws SQLException {
         String selectQuery = MemberQueries.FindMemberById;
         String updateQuery = MemberQueries.UpdateMemberById;
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
         try {
             connection = getConnection();
             preparedStatement = connection.prepareStatement(selectQuery);
@@ -89,8 +100,11 @@ public class MemberRepositoryV0 extends ParentMemberRepository implements Member
     }
 
     @Override
+    @Transactional
     public void deleteById(String memberId) throws SQLException {
         String deleteQuery = MemberQueries.DeleteMemberById;
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
 
         try {
             connection = getConnection();

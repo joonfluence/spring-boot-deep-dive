@@ -12,7 +12,7 @@ class DBConnectionImplTest {
     @DisplayName("1. 정상적으로 DB 연결이 처리되는지 확인한다.")
     @Test
     void getConnection() {
-        Connection connection = DBConnectionImpl.getConnection();
+        Connection connection = DBConnectionImpl.getConnectionV0();
         assertThat(connection).isNotNull();
     }
 }

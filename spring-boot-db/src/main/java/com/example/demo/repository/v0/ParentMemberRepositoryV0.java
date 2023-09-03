@@ -1,6 +1,7 @@
-package com.example.demo.repository;
+package com.example.demo.repository.v0;
 
 import com.example.demo.connection.DBConnectionImpl;
+import com.example.demo.repository.MemberQueries;
 import lombok.extern.slf4j.Slf4j;
 
 import java.sql.Connection;
@@ -9,7 +10,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 @Slf4j
-public class ParentMemberRepository extends MemberQueries {
+public class ParentMemberRepositoryV0 extends MemberQueries {
 
     public void close(Connection connection, Statement statement, ResultSet rs){
         if(rs != null){
@@ -39,6 +40,6 @@ public class ParentMemberRepository extends MemberQueries {
     }
 
     public Connection getConnection(){
-        return DBConnectionImpl.getConnection();
+        return DBConnectionImpl.getConnectionV0();
     }
 }
