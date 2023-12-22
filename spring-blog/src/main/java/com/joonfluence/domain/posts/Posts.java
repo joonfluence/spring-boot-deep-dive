@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 public class Posts extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "post_id")
     private Long id;
 
     @Column(length = 500, nullable = false)
@@ -22,6 +23,12 @@ public class Posts extends BaseTimeEntity {
 
     @Builder
     public Posts(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
+    @Builder
+    public Posts(Long id, String title, String content) {
+        this.id = id;
         this.title = title;
         this.content = content;
     }

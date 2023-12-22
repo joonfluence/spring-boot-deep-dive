@@ -1,17 +1,48 @@
 package com.joonfluence.service.posts;
 
+import com.joonfluence.domain.posts.PostRepository;
 import com.joonfluence.domain.posts.Posts;
 import com.joonfluence.web.dto.posts.PostsCreateRequestDto;
 import com.joonfluence.web.dto.posts.PostsFindRequestDto;
 import com.joonfluence.web.dto.posts.PostsUpdateRequestDto;
+import jakarta.transaction.Transactional;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 
-public interface PostsService {
-    Posts create(PostsCreateRequestDto dto) throws IllegalAccessException, Exception;
-    Posts update(Long id, PostsUpdateRequestDto dto) throws Exception;
-    Page<Posts> find(PostsFindRequestDto dto) throws Exception;
+import java.util.NoSuchElementException;
 
-    Posts findById(Long id) throws Exception;
+@RequiredArgsConstructor
+@Service
+public class PostsService {
+    private final PostRepository postRepository;
 
-    void delete(Long id) throws Exception;
+    @Transactional
+    public Posts create(PostsCreateRequestDto dto) {
+        return postRepository.save(dto.toEntity());
+    }
+
+    @Transactional
+    public Posts update(Long id, PostsUpdateRequestDto dto) throws NoSuchElementException {
+        Posts posts = postRepository.findById(id).orElseThrow(() -> new NoSuchElementException("존재하지 않는 게시글입니다"));
+        posts.update(dto.getTitle(), dto.getContent());
+        return posts;
+    }
+
+    public Page<Posts> find(PostsFindRequestDto dto) throws Exception {
+        Pageable pageable = PageRequest.of(dto.getPage(), dto.getPageSize());
+        return postRepository.findAll(pageable);
+    }
+
+    public Posts findById(Long id) throws NoSuchElementException {
+        return postRepository.findById(id).orElseThrow(() -> new NoSuchElementException("존재하지 않는 게시글입니다"));
+    }
+
+    @Transactional
+    public void delete(Long id) throws NoSuchElementException {
+        postRepository.findById(id).orElseThrow(() -> new NoSuchElementException("존재하지 않는 게시글입니다"));
+        postRepository.deleteById(id);
+    }
 }
